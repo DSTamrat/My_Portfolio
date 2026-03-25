@@ -1,0 +1,248 @@
+/* ANIMATED DARK BLUE BACKGROUND */
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  color: #ffffff;
+  background: linear-gradient(135deg, #06182e, #0a2342, #0f335c, #06182e);
+  background-size: 400% 400%;
+  animation: gradientFlow 18s ease infinite;
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* FRONT PAGE LAYOUT */
+.front-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 60px 60px;
+  min-height: 80vh;
+}
+
+/* LEFT PHOTO + TITLE BELOW */
+.fp-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column; /* stack photo + title vertically */
+  align-items: center; /* center under photo */
+  margin-top: -40px;
+  margin-left: -20px;
+}
+
+.fp-photo {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 35px rgba(77, 184, 255, 0.6);
+}
+
+/* TITLE BLOCK UNDER PHOTO */
+.fp-title-block {
+  margin-top: 28px; /* adjust spacing below photo */
+  text-align: center;
+  width: 100%;
+}
+
+.fp-name {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.fp-title {
+  font-size: 1.3rem;
+  margin-top: 6px;
+  opacity: 0.9;
+}
+
+/* RIGHT CONTENT */
+.fp-right {
+  flex: 1.5;
+  padding-left: 20px;
+  margin-left: -40px;
+}
+
+/* SKILL BOX */
+.fp-box {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 20px;
+  margin-top: 25px;
+  border-radius: 12px;
+  border-left: 4px solid #4db8ff;
+}
+
+/* SECTOR DROPDOWNS */
+.sector-dropdowns {
+  margin-top: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px; /* spacing between dropdowns */
+  align-items: flex-start;
+  max-width: 650px;
+}
+
+/* DROPDOWN CARD */
+.dropdown-card {
+  width: 100%;
+  max-width: 650px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  border-left: 4px solid #4db8ff;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+/* Extra spacing for Technical Ecosystem */
+.dropdown-card.tech-ecosystem {
+  margin-top: 12px;
+}
+
+/* MAIN DROPDOWN HOVER GLOW */
+.dropdown-card:hover {
+  box-shadow: 0 0 12px rgba(77, 184, 255, 0.45);
+}
+
+/* DROPDOWN BUTTON */
+.dropdown-card-btn {
+  width: 100%;
+  background: transparent;
+  color: #ffffff;
+  padding: 18px 22px;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* BUTTON INNER GLOW */
+.dropdown-card-btn:hover {
+  background: rgba(255, 255, 255, 0.18);
+  box-shadow: inset 0 0 10px rgba(77, 184, 255, 0.35);
+}
+
+/* DROPDOWN CONTENT */
+.dropdown-card-content {
+  display: none;
+  padding: 15px 25px 25px 25px;
+}
+
+.dropdown-card.active .dropdown-card-content {
+  display: block;
+}
+
+/* SUBSECTION */
+.subsection {
+  margin-top: 15px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  overflow: hidden;
+  border-left: 3px solid #4db8ff;
+  max-width: 600px;
+  transition: box-shadow 0.3s ease;
+}
+
+/* SUBSECTION GLOW */
+.subsection:hover {
+  box-shadow: 0 0 10px rgba(77, 184, 255, 0.35);
+}
+
+/* SUBSECTION BUTTON */
+.subsection-btn {
+  width: 100%;
+  background: transparent;
+  color: #ffffff;
+  padding: 14px 18px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* SUBSECTION BUTTON INNER GLOW */
+.subsection-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 0 8px rgba(77, 184, 255, 0.25);
+}
+
+/* SUBSECTION CONTENT */
+.subsection-content {
+  display: none;
+  padding: 10px 20px 15px 25px;
+}
+
+.subsection.active .subsection-content {
+  display: block;
+}
+
+/* LIST STYLE */
+.subsection-content ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.subsection-content li {
+  margin-bottom: 6px;
+  line-height: 1.45;
+  transition: 0.25s ease;
+}
+
+/* LIST ITEM GLOW */
+.subsection-content li:hover {
+  color: #4db8ff;
+  text-shadow: 0 0 6px rgba(77, 184, 255, 0.45);
+}
+
+/* CONTACT BAR */
+.contact-bar {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 18px;
+  text-align: center;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.contact-bar span {
+  opacity: 0.9;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .front-page {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .fp-right {
+    padding-left: 0;
+    margin-left: 0;
+    margin-top: 30px;
+  }
+
+  .fp-photo {
+    width: 240px;
+    height: 240px;
+  }
+
+  .contact-bar {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
