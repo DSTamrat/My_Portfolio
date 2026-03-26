@@ -58,8 +58,8 @@ body {
   font-size: 2rem;
   margin: 0;
 }
-
 .fp-title {
+  font-style: italic;
   font-size: 1.3rem;
   margin-top: 6px;
   opacity: 0.9;
